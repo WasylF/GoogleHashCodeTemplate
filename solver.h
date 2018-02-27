@@ -1,6 +1,6 @@
-#include "Input.h"
-#include "Output.h"
-#include "Headers.h"
+#include "input.h"
+#include "output.h"
+#include "headers.h"
 
 class Solver {
 public:

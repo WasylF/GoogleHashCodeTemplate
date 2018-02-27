@@ -1,5 +1,5 @@
-#include "Solver.h"
-#include "Headers.h"
+#include "solver.h"
+#include "headers.h"
 
 int main() {
 	vector<string> inputFiles = { "in1.txt", "in2.txt" };
