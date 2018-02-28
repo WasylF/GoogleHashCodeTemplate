@@ -1,7 +1,6 @@
 #include "headers.h"
 
-class Input {
-public:
+struct Input {
 	// fields declaration
 	int a;
 	int b;
@@ -10,7 +9,7 @@ public:
 	Input(int a, int b) : a(a), b(b) {}
 
 	// read input from file
-	static Input read(string fileName) {
+	static Input read(string &fileName) {
 	    ifstream in(fileName.c_str());
 		return read(in);
 	}

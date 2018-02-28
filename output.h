@@ -1,15 +1,15 @@
 #include "headers.h"
 
 class Output {
-public:
 	// fields declaration
 	int c;
 
+public:
 	// constructor with all fields
 	Output(int c) : c(c) {}
 
 	// write output to file
-	void write(string fileName) {
+	void write(string &fileName) {
 	    ofstream out(fileName.c_str());
 		write(out);
 	}
