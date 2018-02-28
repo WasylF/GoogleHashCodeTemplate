@@ -2,15 +2,15 @@
 #include "headers.h"
 
 int main() {
-	vector<string> inputFiles = { "in1.txt", "in2.txt" };
-	vector<string> outputFiles = { "out1.txt", "out2.txt" };
+	vector<string> files = {"example", "small", "medium", "big" };
 	cout << fixed;
 	cout << setprecision(1);
 
-	for (int i = 0; i < inputFiles.size(); i++) {
+	for (int i = 0; i < files.size(); i++) {
 	
 		cout << "Start reading input # " << (i + 1) << endl;
-		Input input = Input::read(inputFiles[i]);
+		Input input;
+		input.read(files[i] + ".in");
 		cout << "Input received" << endl;
 		
 		Solver solver;
@@ -21,7 +21,7 @@ int main() {
 		double duration = double(after - before) / CLOCKS_PER_SEC;
 		cout << "Task solved in:\t" << duration << " seconds" << endl;
 		
-		output.write(outputFiles[i]);
+		output.write(files[i] + ".out");
 		cout << "Output file has been written" << endl;
 	}
 

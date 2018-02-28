@@ -2,23 +2,24 @@
 
 struct Input {
 	// fields declaration
-	int a;
-	int b;
+	int R,C,L,H;
+    static const int MaxR = 1'000;
+    static const int MaxC = 1'000;
 
-	// constructor with all fields
-	Input(int a, int b) : a(a), b(b) {}
+    char pizza[MaxR+5][MaxC + 5];
+
 
 	// read input from file
-	static Input read(string &fileName) {
+	void read(string fileName) {
 	    ifstream in(fileName.c_str());
-		return read(in);
+		read(in);
 	}
 
 	// read input from file or keyboard
-	static Input read(istream &in) {
-		int a, b;
-		in >> a >> b;
-
-		return Input(a, b);
+	void read(istream &in) {
+		in >> R >> C >> L >> H;
+        for (int i = 1; i <= R; i++)
+            for (int j = 1; j <= C; j++)
+                in >> pizza[i][j];
 	}
 };
